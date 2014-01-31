@@ -1,8 +1,8 @@
 package ch.tkuhn.hashuri.rdf;
 
-import org.nanopub.MalformedNanopubException;
-import org.nanopub.Nanopub;
-import org.nanopub.NanopubImpl;
+import ch.tkuhn.nanopub.MalformedNanopubException;
+import ch.tkuhn.nanopub.Nanopub;
+import ch.tkuhn.nanopub.NanopubImpl;
 import org.openrdf.model.URI;
 import org.openrdf.model.impl.URIImpl;
 import org.openrdf.repository.sparql.SPARQLRepository;

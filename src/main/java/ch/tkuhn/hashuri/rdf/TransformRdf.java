@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.nanopub.CustomTrigWriterFactory;
+import ch.tkuhn.nanopub.CustomTrigWriterFactory;
 import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
 import org.openrdf.model.Value;
