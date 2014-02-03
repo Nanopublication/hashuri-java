@@ -2,8 +2,8 @@ package ch.tkuhn.hashuri.rdf;
 
 import java.util.List;
 
-import ch.tkuhn.nanopub.Nanopub;
-import ch.tkuhn.nanopub.NanopubUtils;
+import org.nanopub.Nanopub;
+import org.nanopub.NanopubUtils;
 import org.openrdf.model.Statement;
 
 import ch.tkuhn.hashuri.HashUriUtils;

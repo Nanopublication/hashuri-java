@@ -4,8 +4,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Map;
 
-import ch.tkuhn.nanopub.Nanopub;
-import ch.tkuhn.nanopub.NanopubUtils;
+import org.nanopub.Nanopub;
+import org.nanopub.NanopubUtils;
 import org.openrdf.model.BNode;
 import org.openrdf.model.Resource;
 import org.openrdf.model.Statement;
