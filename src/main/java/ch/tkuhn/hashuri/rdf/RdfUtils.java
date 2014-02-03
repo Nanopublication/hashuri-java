@@ -20,6 +20,13 @@ import org.openrdf.rio.helpers.RDFaParserSettings;
 
 import ch.tkuhn.hashuri.HashUriResource;
 
+/**
+ * @author Tobias Kuhn
+ * @author Rajaram
+ * @author Mark Thompson
+ * @author Eelke van der Horst
+ */
+
 public class RdfUtils {
 
 	private RdfUtils() {}  // no instances allowed

@@ -9,6 +9,13 @@ import org.openrdf.repository.sparql.SPARQLRepository;
 
 import ch.tkuhn.hashuri.HashUriUtils;
 
+/**
+ * @author Tobias Kuhn
+ * @author Rajaram
+ * @author Mark Thompson
+ * @author Eelke van der Horst
+ */
+
 public class CheckNanopubViaSparql {
 	
 	public static void main(String[] args) throws Exception {

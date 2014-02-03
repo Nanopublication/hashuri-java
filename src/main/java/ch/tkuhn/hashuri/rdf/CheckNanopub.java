@@ -8,6 +8,13 @@ import org.openrdf.model.Statement;
 
 import ch.tkuhn.hashuri.HashUriUtils;
 
+/**
+ * @author Tobias Kuhn
+ * @author Rajaram
+ * @author Mark Thompson
+ * @author Eelke van der Horst
+ */
+
 public class CheckNanopub {
 	
 	public static boolean isValid(Nanopub nanopub) {

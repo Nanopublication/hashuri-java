@@ -20,6 +20,14 @@ import org.openrdf.rio.RDFWriterRegistry;
 import org.openrdf.rio.Rio;
 
 import ch.tkuhn.hashuri.HashUriResource;
+import org.openrdf.rio.RDFHandlerException;
+
+/**
+ * @author Tobias Kuhn
+ * @author Rajaram
+ * @author Mark Thompson
+ * @author Eelke van der Horst
+ */
 
 public class TransformRdf {
 
@@ -67,7 +75,7 @@ public class TransformRdf {
 		return RdfUtils.getHashURI(baseURI, baseURI, hash, null);
 	}
 
-	public static URI transform(RdfFileContent content, RDFHandler handler, String baseName) throws Exception {
+	public static URI transform(RdfFileContent content, RDFHandler handler, String baseName) throws RDFHandlerException  {
 		URI baseURI = getBaseURI(baseName);
 		content = RdfPreprocessor.run(content, baseURI);
 		String hash = RdfHasher.makeHash(content.getStatements());

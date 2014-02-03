@@ -13,6 +13,14 @@ import org.openrdf.model.URI;
 import org.openrdf.rio.RDFFormat;
 
 import ch.tkuhn.hashuri.HashUriResource;
+import org.openrdf.rio.RDFHandlerException;
+
+/**
+ * @author Tobias Kuhn
+ * @author Rajaram
+ * @author Mark Thompson
+ * @author Eelke van der Horst
+ */
 
 public class TransformNanopub {
 
@@ -43,7 +51,7 @@ public class TransformNanopub {
 		return transform(in, RDFFormat.TRIG, out, baseName);
 	}
 
-	public static Nanopub transform(Nanopub nanopub, String baseName) throws Exception {
+	public static Nanopub transform(Nanopub nanopub, String baseName) throws RDFHandlerException, MalformedNanopubException  {
 		RdfFileContent r = new RdfFileContent(RDFFormat.TRIG);
 		NanopubUtils.propagateToHandler(nanopub, r);
 		NanopubRdfHandler h = new NanopubRdfHandler();
