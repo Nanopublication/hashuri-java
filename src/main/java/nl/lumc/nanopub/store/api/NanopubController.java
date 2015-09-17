@@ -94,7 +94,7 @@ public class NanopubController {
             @ApiParam(required = true, value = "The RDF content of the nanopublication to be published")
             @RequestBody(required = true) String nanopub,
             @ApiParam(required = true, value = "Set false if the nanopublication is to be  published into the store, set true if the nanopublication is to be copied to the store")
-            @RequestParam(value = "copy",required = true) boolean copy,
+            @RequestParam(value = "copy",required = false) boolean copy,
             final HttpServletRequest request,
             final HttpServletResponse response) {     
         
@@ -212,7 +212,11 @@ public class NanopubController {
                 else if (contentType.contentEquals("application/n-quads")) {                            
                     NanopubUtils.writeToStream(nanopub, npOutStream, RDFFormat.NQUADS);                            
                     response.setHeader("Content-Type", RDFFormat.NQUADS.toString());                        
-                }	            
+                }	     
+                else {
+                    NanopubUtils.writeToStream(nanopub, npOutStream, RDFFormat.TRIG);                            
+                    response.setHeader("Content-Type", RDFFormat.TRIG.toString());
+                }
                         
                 result = new String(npOutStream.toByteArray(), "UTF-8");
             }
