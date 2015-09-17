@@ -94,7 +94,8 @@ public class NanopubController {
             @ApiParam(required = true, value = "The RDF content of the nanopublication to be published")
             @RequestBody(required = true) String nanopub,
             @ApiParam(required = true, value = "Set false if the nanopublication is to be  published into the store, set true if the nanopublication is to be copied to the store")
-            @RequestParam(value = "copy",required = false) boolean copy,
+            @RequestParam(value = "copy",required = false, 
+                    defaultValue ="false") boolean copy,
             final HttpServletRequest request,
             final HttpServletResponse response) {     
         
